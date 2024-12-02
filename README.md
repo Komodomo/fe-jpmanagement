@@ -38,5 +38,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Repository Description
 
 This is a front-end project on the learning Hours Management assignment(Manajemen Jam Pembelajaran). class XII (Vocational High School) group assignment
-
+DISCONTINUED
 First next js project for me 😅
