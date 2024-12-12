@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import { Button } from '@nextui-org/react'
-import { Input } from "@nextui-org/input";
-import { UserIcon, KeyIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image';
+import { Button, Input } from '@nextui-org/react';
+import {  } from "@nextui-org/input";
+import { UserIcon, KeyIcon } from '@heroicons/react/24/solid';
 
 export default function Login() {
   return (
@@ -20,7 +20,7 @@ export default function Login() {
       {/* Two column layout */}
       <div className="flex w-full">
         {/* Left side - Login form */}
-        <div className="w-1/2 flex items-center justify-center px-8 sm:px-16">
+        <div className="w-full md:w-1/2 flex items-center justify-center px-6 sm:px-8 md:px-16">
           <div className="max-w-sm w-full relative z-10">
             <div className="text-start mb-6 sm:mb-8">
               <h1 className="text-xl sm:text-2xl md:text-3xl text-black">Welcome Back!</h1>
@@ -42,7 +42,7 @@ export default function Login() {
               />
 
               <Input
-                label="Password"
+                label="Password" 
                 type="password"
                 endContent={
                   <KeyIcon className="w-4 sm:w-5 h-4 sm:h-5 text-default-400 pointer-events-none flex-shrink-0" />
@@ -64,27 +64,31 @@ export default function Login() {
           </div>
         </div>
 
-        {/* Right side - Wave decoration */}
-        <div className="w-1/2 relative select-none pointer-events-none">
-        <div className="absolute inset-0" 
-       style={{
-         maskImage: 'url(/assets/images/wave.svg)',
-         WebkitMaskImage: 'url(/assets/images/wave.svg)',
-         maskSize: 'cover',
-         WebkitMaskSize: 'cover',
-         maskPosition: 'center -100px', // Move up by 100px
-      WebkitMaskPosition: 'center -100px',
-       }}>
-    <Image
-      src="/assets/images/smktelkombjb.jpg"
-      alt="SMK Telkom Background"
-      fill
-      className="object-cover"
-      priority
-    />
-  </div>
+        {/* Right side - Wave decoration - Hidden on mobile */}
+        <div className="hidden md:block w-1/2 relative select-none pointer-events-none">
+          <div
+            className="absolute inset-0"
+            style={{
+              maskImage: 'url(/assets/images/wave.svg)',
+              WebkitMaskImage: 'url(/assets/images/wave.svg)',
+              maskSize: 'cover',
+              WebkitMaskSize: 'cover',
+              maskRepeat: 'no-repeat',
+              WebkitMaskRepeat: 'no-repeat',
+              maskPosition: 'center',
+              WebkitMaskPosition: 'center'
+            }}
+          >
+            <Image
+              src="/assets/images/smktelkombjb.jpg"
+              alt="SMK Telkom Background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
